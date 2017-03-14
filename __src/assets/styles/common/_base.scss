@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+
+::selection {
+  background-color: var(--light);
+}
+* {
+  box-sizing: border-box;
+  &:active,
+  &:hover,
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
+.svg--logo {
+  fill: none;
+  stroke: var(--dark);
+  stroke-width: 60;
+  stroke-miterlimit: 10;
+  transition: all .3s ease;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+h1, h2, h3, p {
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1 {
+  font-size: 4em;
+  @include max-screen($sm) {
+    font-size: 2.2rem;
+  }
+}
+h2 {
+  font-size: 3em;
+  line-height: 1.2;
+  @include max-screen($sm) {
+    font-size: 1.8em;
+  }
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.4;
+}
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  @include max-screen($sm) {
+    font-size: 1.2em;
+  }
+}
+.scroll {
+  width: 100%;
+  text-align: center;
+  font-size: 6em;
+  text-shadow: none;
+  transition: transform .1s ease-in;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background: var(--light);
+  position: relative;
+  font-size: 16px;
+  @include max-screen($sm) {
+    font-size: 12px;
+  }
+}
+
+#{$project-prefix} {
+  border-left: #{$border-width} solid var(--dark);
+  border-right: #{$border-width} var(--dark);
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: calc(#{$hero-height} - #{$nav-height}) !important;
+}
+
+.section1 {
+  position: sticky;
+  top: calc(-#{$section-height} + #{$base-space}*3);
+  z-index: 900;
+}
+.section2 {
+  position: sticky;
+  background-color: rgba(0,160,176,1);
+  top: calc(-#{$section-height} + #{$base-space}*4);
+  z-index: 800;
+}
+
+[class^="section"] {
+  padding: $base-space;
+  min-height: $section-height;
+  background-color: var(--dark);
+  color: var(--light);
+  &:nth-of-type(odd) {
+    background-color: rgba(0,160,176,1);
+    color: var(--dark);
+  }
+}

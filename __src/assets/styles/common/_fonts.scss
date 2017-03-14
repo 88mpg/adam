@@ -1,0 +1,33 @@
+// FONTS.SCSS RESERVED FOR FONT IMPORTS ONLY
+
+@font-face {
+    font-family: 'SamsungOne';
+    src: url('/us/fonts/SamsungOne/SamsungOne-400.eot');
+    src: url('/us/fonts/SamsungOne/SamsungOne-400.ttf') format('truetype'),
+         url('/us/fonts/SamsungOne/SamsungOne-400.svg#SamsungOne') format('svg'),
+         url('/us/fonts/SamsungOne/SamsungOne-400.woff') format('woff'),
+         url('/us/fonts/SamsungOne/SamsungOne-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SamsungOne';
+    src: url('/us/fonts/SamsungOne/SamsungOne-700.eot');
+    src: url('/us/fonts/SamsungOne/SamsungOne-700.ttf') format('truetype'),
+         url('/us/fonts/SamsungOne/SamsungOne-700.svg#SamsungOne') format('svg'),
+         url('/us/fonts/SamsungOne/SamsungOne-700.woff') format('woff'),
+         url('/us/fonts/SamsungOne/SamsungOne-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Samsung Sharp Sans';
+    src: url('/us/fonts/SamsungSharpSans-Bold.eot');
+    src: url('/us/fonts/SamsungSharpSans-Bold.ttf') format('truetype'),
+         url('/us/fonts/SamsungSharpSans-Bold.svg#SamsungSharpSans') format('svg'),
+         url('/us/fonts/SamsungSharpSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+}

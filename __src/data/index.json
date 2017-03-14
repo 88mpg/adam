@@ -1,0 +1,32 @@
+{
+	"hero": {
+		"title": "I'm Adam Fratino",
+		"description": "(Yet another front-end developer with a background in design).",
+		"copy": [
+			"The first bit of code I ever learned was a CSS snippet to hide the advertisements on an Angelfire site. Since then I've been working client-side development in the advertising world to make up for it."
+		]
+	},
+	"nav": {
+		"links": [
+			{
+				"copy": "Github",
+				"url": "#"
+			},
+			{
+				"copy": "Codepen",
+				"url": "#"
+			},
+			{
+				"copy": "Stack",
+				"url": "#"
+			}
+		]
+	},
+	"footer": {
+		"title": "Lorem ipsum dolor sit.",
+		"copy": [
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque placeat, sit nobis quasi. Dignissimos quos laudantium voluptates tempora id magnam sed dolorem soluta aliquam. Cupiditate obcaecati quasi fugiat! Ipsum, eveniet.",
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque placeat, sit nobis quasi. Dignissimos quos laudantium voluptates tempora id magnam sed dolorem soluta aliquam. Cupiditate obcaecati quasi fugiat! Ipsum, eveniet."
+		]
+	}
+}
