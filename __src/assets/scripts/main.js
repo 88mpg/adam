@@ -1,3 +1,5 @@
+import jump from 'jump.js';
+
 (function (window, document, undefined) {
 	'use strict';
 
@@ -6,6 +8,9 @@
 	// TODO: craete svg logo and animate on page load
 
 	const nav = document.querySelector('nav');
+	const hero = document.querySelector('.hero');
+	const upArrow = document.getElementById('goUp');
+	const downArrow = document.getElementById('goDown');
 
 	function navExpand() {
 
@@ -24,15 +29,25 @@
 	  };
 	}
 
-	function goUp() {
-	  const upArrow = document.getElementById('goUp');
-	  upArrow.addEventListener('click', function(e) {
-	    e.preventDefault();
-			// scroll to top
-	  });
+	navExpand();
+
+	function goDown(e) {
+		e.preventDefault();
+		jump('section', {
+			duration: 500,
+			offset: -32
+		});
 	}
 
-	navExpand();
-	goUp();
+	upArrow.addEventListener('click', (e) => {
+		e.preventDefault();
+		jump('body', {
+			duration: 1000
+		});
+	});
+
+	downArrow.addEventListener('click', goDown);
+
+	console.log('send me an email: info@adamfratino.com');
 
 })(window, document);

@@ -3,30 +3,54 @@
 		"title": "I'm Adam Fratino",
 		"description": "(Yet another front-end developer with a background in design).",
 		"copy": [
-			"The first bit of code I ever learned was a CSS snippet to hide the advertisements on an Angelfire site. Since then I've been working client-side development in the advertising world to make up for it."
+			"The first bit of code I ever learned was a CSS snippet to hide the advertisements on an Angelfire site. Since then I've been working client-side development in the advertising world to make up for it.",
+			"I came to New York City to get my BFA in Graphic Design at the School of Visual Arts. I stuck around to develop scalable frameworks for rapid static builds. I'm in love with pushing the limits of CSS, and Javascript is pretty fun too."
 		]
 	},
 	"nav": {
-		"links": [
+		"links": []
+	},
+	"projects": {
+		"title": "Sometimes I make things.",
+		"description": "I'm always trying to find some free time to work on a personal project. Sometimes I'll make something because I need it and it'll make my life easier, but usually I'll just get something in my head and see where it takes me. Most of the time the result is that I learned something new.",
+		"project": [
 			{
-				"copy": "Github",
-				"url": "#"
+				"title": "Casio Watch",
+				"description": "Rebuilding the classic Casio digital watch with some basic functionality and a lot of advanced styling.",
+				"link": "//88mpg.github.io/casio-watch/"
 			},
 			{
-				"copy": "Codepen",
-				"url": "#"
+				"title": "Table-to-JSON",
+				"description": "Born from a need to convert lots of tables to lots of JSON, definitely nothing fancy but it gets the job done.",
+				"link": "//tabletojson.com"
 			},
 			{
-				"copy": "Stack",
-				"url": "#"
+				"title": "Skeeskore",
+				"description": "A quick webapp to manually track a skeeball score since the machines at Full Circle Bar are always broken.",
+				"link": "//88mpg.github.io/skeeskore/"
+			},
+			{
+				"title": "Skeeact",
+				"description": "The same thing as Skeeskore, except with React since that makes more sense.",
+				"link": "//88mpg.github.io/skeeact/"
+			},
+			{
+				"title": "Tekken Chicken [BETA]",
+				"description": "If you wanna be really good at Tekken you need to study frame data. I tried to make something that helps.",
+				"link": "//88mpg.github.io/tekken-chicken/"
+			},
+			{
+				"title": "Tekken Rooster [WIP]",
+				"description": "I tried coming up with a cool way to automate a visual sidekick for the frame data from the JSON files. It's hard.",
+				"link": "//88mpg.github.io/tc2/"
 			}
 		]
 	},
 	"footer": {
-		"title": "Lorem ipsum dolor sit.",
+		"title": "Thanks for visiting!",
 		"copy": [
-			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque placeat, sit nobis quasi. Dignissimos quos laudantium voluptates tempora id magnam sed dolorem soluta aliquam. Cupiditate obcaecati quasi fugiat! Ipsum, eveniet.",
-			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque placeat, sit nobis quasi. Dignissimos quos laudantium voluptates tempora id magnam sed dolorem soluta aliquam. Cupiditate obcaecati quasi fugiat! Ipsum, eveniet."
+			"Hopefully you've got a decent idea of who I am by now. I'm always interested in contributing to new projects, so hit me up if you think I have the skills you're looking for. (You can find my email address in the console log).",
+			"[Placeholder for links to all my other accounts]"
 		]
 	}
 }

@@ -7,11 +7,9 @@ var dest = config.dest;
 // REQUIRE VARIOUS
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
+var source = require('vinyl-source-stream');
 var del = require('del');
 var entityconvert = require('gulp-entity-convert');
-var path = require('path');
-var merge = require('merge-stream');
-var fs = require('fs');
 
 // REQUIRE HTML
 var hb = require('gulp-hb');
@@ -22,16 +20,13 @@ var extname = require('gulp-extname');
 var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
 var nano = require('gulp-cssnano');
-var autoprefixer = require('autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var reporter = require("postcss-reporter");
 var stylelint = require("stylelint");
 
 // REQUIRE JS
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat-util');
-var eslint = require('gulp-eslint');
-var babel = require('gulp-babel');
+var browserify = require('browserify');
+var babelify = require('babelify');
 var es2015 = require('babel-preset-es2015');
 
 // REQUIRE IMAGE MINIFICATION
@@ -96,33 +91,13 @@ gulp.task('css', function () {
     .pipe(browserSync.reload({stream:true})); // Fire Browsersync
 });
 
-// HELPER FUNCTION TO BUILD OUT SEPARATE CONCAT FILES FOR APP AND VENDOR JS
-function getFolders(dir) {
-  return fs.readdirSync(dir)
-    .filter(function(file) {
-      return fs.statSync(path.join(dir, file)).isDirectory();
-    });
-}
-
-// BUILD JS
-// TODO: build out separate files for app and vendor
 gulp.task('js', function() {
-  var jsPath = config.root + config.scripts;
-  var folders = getFolders(jsPath);
-
-  var tasks = folders.map(function(folder) {
-    return gulp.src(path.join(jsPath, folder, '/**/*.js'))
-      .pipe(eslint({ /* options located in ./.eslintrc */ }))
-      .pipe(eslint.format())
-      .pipe(eslint.failOnError())
-      .pipe(sourcemaps.init())
-      .pipe(babel({ presets: ['es2015'] }))
-      .pipe(concat(folder + '.js'))
-      .pipe(uglify())
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest(dest + '/assets/js/' + folder))
-      .pipe(browserSync.reload({stream:true})); // Fire Browsersync
-  });
+  return browserify(config.root + config.scripts + '/main.js')
+    .transform("babelify", {presets: ["es2015"]})
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(gulp.dest(dest + '/assets/js/'))
+    .pipe(browserSync.reload({stream:true})); // Fire Browsersync
 });
 
 // MINIFY IMAGES
@@ -147,7 +122,7 @@ gulp.task('browser-sync', function() {
     // proxy: config.local + '/_build/',
     server: './_build',
     port: 3030,
-    open: true,
+    open: false,
     injectChanges: true
   });
 });

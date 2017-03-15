@@ -1,4 +1,7 @@
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: $base-space;
   color: var(--dark);
   background-color: var(--light);

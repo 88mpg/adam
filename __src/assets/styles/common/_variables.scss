@@ -12,8 +12,8 @@ $nav-height: 4rem;
 $border-width: 0;
 
 // BOURBON NEAT GRID OPTIONS
-$grid-columns: 10;
-$gutter: modular-scale(1, 0.5em, $golden) !default;
+$grid-columns: 12;
+$gutter: modular-scale(5, 0.5em, $golden) !default;
 $max-width: 1260px;
 $visual-grid: false;
 $visual-grid-index: front;
@@ -40,4 +40,5 @@ $font: (
   --primary: rgba(255,170,0,1);
   --primaryDark: rgba(255,145,0,1);
   --secondary: rgba(47,141,202,1);
+	--secondaryLight: rgba(0,160,176,1);
 }

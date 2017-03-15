@@ -1,0 +1,9 @@
+.passions {
+  position: sticky;
+  background-color: rgba(0,160,176,1);
+  min-height: calc(#{$section-height} - #{$base-space}*4);
+  top: calc(-#{$section-height} + #{$base-space}*8);
+  z-index: 800;
+  background-color: var(--secondaryLight);
+  color: var(--dark);
+}

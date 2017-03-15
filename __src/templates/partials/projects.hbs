@@ -1,0 +1,12 @@
+<section id="projects" class="projects">
+  <div class="projects--container">
+    <h2>{{{ title }}}</h2>
+    <h4>{{{ description }}}</h4>
+    {{#each project}}
+    <div class="projects--item">
+      <a class="projects--title" href="{{ link }}">{{{ title }}}</a>
+      <p>{{{ description }}}</p>
+    </div>
+    {{/each}}
+  </div>
+</section>
