@@ -1,64 +1,96 @@
 const THREE = require('three');
 
-const cubes = function() {
+const cubes = function(container) {
+  let HEIGHT = container.offsetHeight;
+  let WIDTH = container.offsetWidth;
 
-  const scene = new THREE.Scene();
-  const TARGET = passions;
+  let camera, scene, renderer, group, cube;
+  let mouseX = 0, mouseY = 0;
 
-  // Set the scene size
-  let WIDTH = TARGET.offsetWidth;
-  let HEIGHT = TARGET.offsetHeight;
-  let ASPECT = WIDTH / HEIGHT;
+  let windowHalfX = window.innerWidth/2;
+  let windowHalfY = window.innerHeight/2;
 
-  // Create a WebGL renderer, camera and scene
-  const renderer = new THREE.WebGLRenderer({ alpha: true });
-  const camera = new THREE.PerspectiveCamera( 45, ASPECT, 0.1, 10000 );
+  init();
+  animate();
 
-  // Start the renderer
-  renderer.setSize( WIDTH, HEIGHT );
+  function init() {
 
-  // Attach the renderer-supplied DOM element
-  TARGET.appendChild( renderer.domElement );
+    camera = new THREE.PerspectiveCamera( 75, WIDTH / HEIGHT, 1, 3000 );
+    camera.position.z = -1000;
 
-  const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-  const material = new THREE.MeshLambertMaterial( { color: 0xffdc00 } );
-  const cube = new THREE.Mesh( geometry, material );
-  const pointLight = new THREE.PointLight(0xFFFFFF);
+    scene = new THREE.Scene();
 
-  // set its position
-  pointLight.position.x = 10;
-  pointLight.position.y = 50;
-  pointLight.position.z = 130;
+    // const pointLight = new THREE.PointLight(0xFFFFFF);
+    //
+    // pointLight.position.x = 0;
+    // pointLight.position.y = 0;
+    // pointLight.position.z = -1000;
+    //
+    // scene.add( pointLight );
 
-  scene.add( pointLight, cube );
+    group = new THREE.Group();
+    scene.add( group );
 
-  camera.position.z = 5;
+    const geometry = new THREE.SphereGeometry( 3, 16, 16 );
+    const material = new THREE.MeshBasicMaterial( {
+      color: 0xffdc00,
+      opacity: 0.5
+    } );
 
-  function render() {
-    requestAnimationFrame( render );
 
-    cube.rotation.x += 0.1;
-    cube.rotation.y += 0.1;
+    for (let i=0; i < 1000; i++) {
+      cube = new THREE.Mesh( geometry, material );
+      cube.position.x = Math.random() * 2000 - 1000;
+			cube.position.y = Math.random() * 2000 - 1000;
+			cube.position.z = Math.random() * 2000 - 1000;
+			cube.scale.x = 1;
+      cube.scale.y = cube.scale.x;
+			group.add( cube );
+    }
 
-    renderer.render(scene, camera);
-  };
+    renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( WIDTH, HEIGHT );
+    container.appendChild( renderer.domElement );
 
-  render();
-
-  window.addEventListener('resize', onWindowResize, false);
+    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+		// document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+		// document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+    window.addEventListener( 'resize', onWindowResize, false );
+  }
 
   function onWindowResize() {
-    // Set the scene size
-    WIDTH = TARGET.offsetWidth;
-    HEIGHT = TARGET.offsetHeight;
-    ASPECT = WIDTH / HEIGHT;
+    WIDTH = container.offsetWidth;
+    HEIGHT = container.offsetHeight;
 
-    camera.aspect = ASPECT;
-    camera.updateProjectionMatrix();
+		windowHalfX = WIDTH / 2;
+		windowHalfY = HEIGHT / 2;
+		camera.aspect = WIDTH / HEIGHT;
+		camera.updateProjectionMatrix();
+		renderer.setSize( WIDTH, HEIGHT );
+	}
 
-    renderer.setSize( WIDTH, HEIGHT );
+  function onDocumentMouseMove(event) {
+    mouseX = event.clientX - windowHalfX;
+    mouseY = event.clientY - windowHalfY;
+  }
+
+  function animate() {
+    requestAnimationFrame( animate );
+    render();
+  }
+
+  function render() {
+    camera.position.x += ( mouseX - camera.position.x ) * .005;
+		camera.position.y += ( - mouseY - camera.position.y ) * .005;
+		camera.lookAt( scene.position );
+
+    group.rotation.x += 0.0001;
+		group.rotation.y += 0.0002;
+
+		renderer.render( scene, camera );
   }
 
 }
 
-module.exports = cubes();
+module.exports = cubes;

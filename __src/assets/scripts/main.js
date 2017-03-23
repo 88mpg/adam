@@ -10,3 +10,7 @@ const arrowScrolls = require('./app/arrowScrolls.js');
 
 // an edgy way to display my email to people who visit
 console.log('send me an email: info@adamfratino.com');
+
+cubes(hero);
+cubes(projects);
+cubes(passions);
