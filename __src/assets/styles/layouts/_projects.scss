@@ -9,11 +9,17 @@
     @include outer-container(720px);
   }
 
-  h4 {
-    margin-bottom: $base-space*5;
+  &--subhead {
+    margin-bottom: $base-space*3;
   }
   &--item {
     @include span-columns(6);
+    @include max-screen($xs) {
+      @include span-columns($grid-columns);
+    }
+    p {
+      font-size: .9rem;
+    }
     margin-bottom: $base-space*3;
     &:nth-of-type(even) {
       @include omega;

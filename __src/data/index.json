@@ -8,7 +8,15 @@
 		]
 	},
 	"nav": {
-		"links": []
+		"links": [
+			{
+				"copy": "Projects",
+				"url": "#projects"
+			},
+			{
+				"copy": "Passions"
+			}
+		]
 	},
 	"projects": {
 		"title": "Sometimes I make things.",

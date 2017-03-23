@@ -32,6 +32,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "jump.js": "^1.0.2"
+    "jump.js": "^1.0.2",
+    "three": "^0.84.0"
   }
 }

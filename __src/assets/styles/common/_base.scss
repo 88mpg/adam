@@ -12,6 +12,11 @@
   }
 }
 
+canvas {
+  position: absolute;
+  z-index: -1;
+}
+
 .svg--logo {
   fill: none;
   stroke: var(--dark);
@@ -90,7 +95,7 @@ body {
 }
 
 section {
-  padding: $base-space;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
