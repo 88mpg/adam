@@ -116,6 +116,11 @@ gulp.task('clean', function() {
   return del(dest);
 });
 
+gulp.task('objects', () => {
+  gulp.src(`${config.root + config.objects}/**/*`)
+    .pipe(gulp.dest(`${dest + config.objects}`));
+});
+
 // LAUNCH BROWSERSYNC
 gulp.task('browser-sync', function() {
   browserSync.init({

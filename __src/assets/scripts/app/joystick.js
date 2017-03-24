@@ -1,10 +1,15 @@
 const THREE = require('three');
+const OBJLoader = require('three-obj-loader');
+OBJLoader(THREE);
 
-const cubes = function(container) {
+const joystick = function() {
+
+  const container = document.querySelector('.joystick');
+
   let HEIGHT = container.offsetHeight;
   let WIDTH = container.offsetWidth;
 
-  let camera, scene, renderer, group, cube;
+  let camera, scene, renderer, material;
   let mouseX = 0, mouseY = 0;
 
   let windowHalfX = window.innerWidth/2;
@@ -15,8 +20,11 @@ const cubes = function(container) {
 
   function init() {
 
-    camera = new THREE.PerspectiveCamera( 75, WIDTH / HEIGHT, 1, 3000 );
-    camera.position.z = -1000;
+    material = new THREE.MeshPhongMaterial({ color: 0xffdc00 });
+
+    camera = new THREE.PerspectiveCamera( 45, WIDTH / HEIGHT, 1, 3000 );
+    camera.position.z = -1500;
+    camera.position.y = 90;
 
     scene = new THREE.Scene();
 
@@ -27,25 +35,16 @@ const cubes = function(container) {
     directionalLight.position.set( 0.5 , 0.5, 1 );
     scene.add( directionalLight );
 
-    group = new THREE.Group();
-    scene.add( group );
+    const loader = new THREE.OBJLoader();
+    loader.load('/assets/objects/joystick.obj', function( object ) {
+      object.traverse( function ( child ) {
+				if ( child instanceof THREE.Mesh ) {
+					child.material = material;
+				}
+			});
+			scene.add( object );
+    });
 
-    const geometry = new THREE.SphereGeometry( 3, 20, 20 );
-    const material = new THREE.MeshLambertMaterial( {
-      color: 0xffdc00,
-      opacity: 0.5
-    } );
-
-
-    for (let i=0; i < 2000; i++) {
-      cube = new THREE.Mesh( geometry, material );
-      cube.position.x = Math.random() * 2000 - 1000;
-			cube.position.y = Math.random() * 2000 - 1000;
-			cube.position.z = Math.random() * 2000 - 1000;
-			cube.scale.x = Math.random() * 2;
-      cube.scale.y = cube.scale.x;
-			group.add( cube );
-    }
 
     renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setPixelRatio( window.devicePixelRatio );
@@ -78,16 +77,13 @@ const cubes = function(container) {
   }
 
   function render() {
-    camera.position.x += ( mouseX - camera.position.x ) * .005;
-		camera.position.y += ( - mouseY - camera.position.y ) * .005;
+    camera.position.x += ( mouseX - camera.position.x ) * 1;
+		camera.position.y += ( - mouseY - camera.position.y ) * 1;
 		camera.lookAt( scene.position );
-
-    group.rotation.x += 0.0001;
-		group.rotation.y += 0.0002;
 
 		renderer.render( scene, camera );
   }
 
 }
 
-module.exports = cubes;
+module.exports = joystick;

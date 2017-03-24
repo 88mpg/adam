@@ -4,6 +4,7 @@
   "styles": "/assets/styles",
   "scripts": "/assets/scripts",
   "images": "/assets/images",
+  "objects": "/assets/objects",
   "data": "/data",
   "templates": {
     "partials": "/templates/partials",
