@@ -4,7 +4,7 @@ const upArrow = document.getElementById('goUp');
 const downArrow = document.getElementById('goDown');
 
 const arrowScrolls = function() {
-  
+
   function goDown(e) {
   	e.preventDefault();
   	jump('section', {
