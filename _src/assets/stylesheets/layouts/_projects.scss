@@ -1,0 +1,41 @@
+// First value is the breakpoint, second value is the amt of columns
+$breakpoints: (
+  sm: (414px, 1),
+  md: (768px, 2),
+);
+
+.projects {
+  position: sticky;
+  min-height: calc(#{$section-height} - #{$base-space}*3);
+  top: calc(-#{$section-height} + #{$base-space}*6);
+  z-index: 900;
+  background-color: var(--dark);
+  color: var(--light);
+  &--container {
+    @include container(720);
+  }
+
+  h4 { margin-bottom: $base-space*5; }
+
+  &--grid {
+    display: grid;
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 20px;
+
+    @each $breakpoints, $breakpoint in $breakpoints {
+      $width: nth($breakpoint, 1);
+      $columns: nth($breakpoint, 2);
+      @media (min-width: $width) {
+        grid-template-columns: repeat($columns, 1fr);
+      }
+    }
+  }
+
+  &--title {
+    color: var(--primary);
+    display: block;
+    margin-bottom: $base-space;
+    font-size: 1.4rem;
+
+  }
+}

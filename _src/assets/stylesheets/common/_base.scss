@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 
-::selection {
-  background-color: var(--light);
-}
+::selection { background-color: var(--light); }
+
 * {
   box-sizing: border-box;
   &:active,

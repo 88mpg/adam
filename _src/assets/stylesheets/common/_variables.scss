@@ -2,7 +2,6 @@
 $project-prefix: '.adam';
 
 // BASE GUIDELINES, FEEL FREE TO EDIT
-
 $logo-padding: true;
 $container-width: 1200px;
 $base-space: 1rem;
@@ -10,15 +9,6 @@ $hero-height: 100vh;
 $section-height: $hero-height;
 $nav-height: 4rem;
 $border-width: 0;
-
-// BOURBON NEAT GRID OPTIONS
-$grid-columns: 12;
-$gutter: modular-scale(5, 0.5em, $golden) !default;
-$max-width: 1260px;
-$visual-grid: false;
-$visual-grid-index: front;
-$visual-grid-color: black;
-$visual-grid-opacity: 0.3;
 
 // BREAKPOINTS
 $xxs: 320px;
