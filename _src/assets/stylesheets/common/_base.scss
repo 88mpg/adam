@@ -61,13 +61,6 @@ p {
     font-size: 1.2em;
   }
 }
-.scroll {
-  width: 100%;
-  text-align: center;
-  font-size: 6em;
-  text-shadow: none;
-  transition: transform .1s ease-in;
-}
 
 body {
   font-family: 'Roboto Slab', serif;
@@ -88,9 +81,37 @@ body {
   margin-bottom: calc(#{$hero-height} - #{$nav-height}) !important;
 }
 
-section {
+.scroll {
+  width: 100%;
+  text-align: center;
+  font-size: 6em;
+  text-shadow: none;
+  transition: transform .1s ease-in;
+  &:hover { transform: translateY(.5rem); }
+}
+
+.section {
+  position: sticky;
+  top: calc(-#{$hero-height} + #{$base-space}*3 + #{$nav-height});
+  height: calc(#{$hero-height} - #{$nav-height} - #{$base-space});
+  z-index: 950;
+  max-width: 100%;
+  background-color: var(--primaryDark);
+  color: var(--dark);
   padding: $base-space;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  &__container {
+    padding: $base-space;
+    flex-basis: 95%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-inner {
+      @include container(720);
+    }
+  }
 }

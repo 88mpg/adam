@@ -13,13 +13,8 @@
 @import "common/fonts";
 @import "common/base";
 
-// Components
-
-// Layouts
-#{$project-prefix} {
-  @import "layouts/nav";
-  @import "layouts/hero";
-  @import "layouts/projects";
-  @import "layouts/passions";
-  @import "layouts/footer";
-}
+@import "layouts/nav";
+@import "layouts/hero";
+@import "layouts/projects";
+@import "layouts/passions";
+@import "layouts/footer";

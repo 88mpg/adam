@@ -19,8 +19,12 @@ $breakpoints: (
 
   &--grid {
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
+    grid-auto-rows: minmax(120px, auto);
     grid-gap: 20px;
+
+    @include max-screen($sm) {
+      grid-gap: 5px;
+    }
 
     @each $breakpoints, $breakpoint in $breakpoints {
       $width: nth($breakpoint, 1);
@@ -37,5 +41,9 @@ $breakpoints: (
     margin-bottom: $base-space;
     font-size: 1.4rem;
 
+  }
+
+  .scroll {
+    color: var(--light);
   }
 }

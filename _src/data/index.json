@@ -4,7 +4,7 @@
 		"description": "(Yet another front-end developer with a background in design).",
 		"copy": [
 			"The first bit of code I ever learned was a CSS snippet to hide ads on an Angelfire site. Since then I've been working client-side development in the ad world to make up for it.",
-			"I came to New York City to get my BFA in Graphic Design at the School of Visual Arts. I stuck around to develop scalable boilerplates for rapid static builds. I'm love pushing the limits of CSS, and Javascript is pretty fun too."
+			"I came to New York City to get my <strong>BFA in Graphic Design</strong> at the <strong>School of Visual Arts</strong>. I stuck around to develop and maintain static sites for enterprise clients at <strong>The Barbarian Group</strong> and <strong>Rokkan</strong>. I love pushing the limits of CSS, and Javascript is pretty fun too."
 		]
 	},
 	"nav": {
@@ -25,19 +25,9 @@
 				"link": "//tabletojson.com"
 			},
 			{
-				"title": "Skeeskore",
-				"description": "A quick webapp to manually track a skeeball score since the machines at Full Circle Bar are always broken.",
-				"link": "//88mpg.github.io/skeeskore/"
-			},
-			{
 				"title": "Skeeact",
 				"description": "The same thing as Skeeskore, except with React since that makes more sense.",
 				"link": "//88mpg.github.io/skeeact/"
-			},
-			{
-				"title": "Tekken Chicken [BETA]",
-				"description": "If you wanna be really good at Tekken you need to study frame data. I tried to make something that helps.",
-				"link": "//88mpg.github.io/tekken-chicken/"
 			},
 			{
 				"title": "Tekken Rooster [WIP]",
