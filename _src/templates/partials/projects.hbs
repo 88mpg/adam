@@ -1,0 +1,17 @@
+<section id="projects" class="section projects">
+  <div class="section__container">
+    <div class="section__container-inner">
+      <h2>{{{ title }}}</h2>
+      <h4>{{{ description }}}</h4>
+      <div class="projects--grid">
+        {{#each project}}
+        <div class="projects--item">
+          <a class="projects--title" href="{{ link }}">{{{ title }}}</a>
+          <p>{{{ description }}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <a class="scroll js-down" href="#">&#65516;</a>
+</section>

@@ -1,0 +1,20 @@
+/*  Node modules
+    1. Add paths to any additional modules to config.js
+    2. Import here */
+@import "normalize";
+@import "media-queries";
+
+@import "common/variables";
+
+@import "mixins/container";
+
+// Common
+@import "common/reset";
+@import "common/fonts";
+@import "common/base";
+
+@import "layouts/nav";
+@import "layouts/hero";
+@import "layouts/projects";
+@import "layouts/passions";
+@import "layouts/footer";
