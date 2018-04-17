@@ -2,20 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: $base-space;
-  color: var(--dark);
-  background-color: var(--light);
+
   position: fixed;
-  height: calc(#{$hero-height} - #{$nav-height});
   bottom: 0;
-  z-index: -1;
-  width: $container-width;
-  max-width: 100%;
-  .scroll {
-    position: absolute;
-    bottom: 1rem;
-    &:hover {
-      transform: translateY(-.5rem);
-    }
-  }
+  left: 0;
+  right: 0;
+
+  background-color: gold;
+  height: 100vh;
+  z-index: 1;
 }

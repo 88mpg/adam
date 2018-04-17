@@ -1,3 +1,12 @@
 .hero {
+  background-color: var(--light);
+  color: var(--dark);
+  // height: calc(100vh - 7rem);
+  // top: 1rem;
+  // padding: 0 2rem;
+  // z-index: 500;
 
+  h1 {
+    margin-bottom: 0;
+  }
 }

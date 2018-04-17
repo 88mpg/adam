@@ -2,116 +2,60 @@
 
 ::selection { background-color: var(--light); }
 
-* {
-  box-sizing: border-box;
-  &:active,
-  &:hover,
-  &:focus {
-    outline: 0 !important;
-  }
+html {
+  font-size: 10px;
+  overflow: visible;
 }
 
-.svg--logo {
-  fill: none;
-  stroke: var(--dark);
-  stroke-width: 60;
-  stroke-miterlimit: 10;
-  transition: all .3s ease;
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto Slab', serif;
+  background: var(--light);
+  color: var(--dark);
 }
 
 a {
   color: var(--dark);
   text-decoration: none;
+  &:hover { text-decoration: underline; }
 }
 
 h1, h2, h3, h4, p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 670px;
-  margin-bottom: 1.5rem;
+  max-width: 67rem;
+  margin-bottom: 3rem;
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-h1 {
-  font-size: 4em;
-  @include max-screen($sm) {
-    font-size: 2.2rem;
-  }
-}
+h1 { font-size: 4.8rem; }
+
 h2 {
-  font-size: 3em;
+  font-size: 3rem;
   line-height: 1.2;
-  @include max-screen($sm) {
-    font-size: 1.8em;
-  }
 }
+
 h3 {
-  font-size: 1.4em;
+  font-size: 2rem;
   line-height: 1.4;
 }
+
 h4 {
   line-height: 1.4;
 }
+
 p {
-  font-size: 1em;
-  line-height: 1.5;
-  @include max-screen($sm) {
-    font-size: 1.2em;
-  }
+  font-size: 1.6rem;
+  line-height: 1.7;
 }
 
-body {
-  font-family: 'Roboto Slab', serif;
-  background: var(--light);
-  position: relative;
-  font-size: 16px;
-  @include max-screen($sm) {
-    font-size: 12px;
-  }
-}
-
-#{$project-prefix} {
-  border-left: #{$border-width} solid var(--dark);
-  border-right: #{$border-width} var(--dark);
-  max-width: $container-width;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: calc(#{$hero-height} - #{$nav-height}) !important;
-}
-
-.scroll {
-  width: 100%;
-  text-align: center;
-  font-size: 6em;
-  text-shadow: none;
-  transition: transform .1s ease-in;
-  &:hover { transform: translateY(.5rem); }
-}
-
-.section {
+section {
   position: sticky;
-  top: calc(-#{$hero-height} + #{$base-space}*3 + #{$nav-height});
-  height: calc(#{$hero-height} - #{$nav-height} - #{$base-space});
-  z-index: 950;
-  max-width: 100%;
-  background-color: var(--primaryDark);
-  color: var(--dark);
-  padding: $base-space;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   flex-direction: column;
-  &__container {
-    padding: $base-space;
-    flex-basis: 95%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &-inner {
-      @include container(720);
-    }
-  }
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }

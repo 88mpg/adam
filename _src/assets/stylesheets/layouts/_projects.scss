@@ -5,15 +5,14 @@ $breakpoints: (
 );
 
 .projects {
+  padding: 5rem;
   position: sticky;
-  min-height: calc(#{$section-height} - #{$base-space}*3);
-  top: calc(-#{$section-height} + #{$base-space}*6);
+  height: auto;
+  top: calc(-100vh + 7rem);
   z-index: 900;
   background-color: var(--dark);
   color: var(--light);
-  &--container {
-    @include container(720);
-  }
+  margin-bottom: calc(100vh - 2rem);
 
   h4 { margin-bottom: $base-space*5; }
 
