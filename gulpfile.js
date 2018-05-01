@@ -20,6 +20,9 @@ const cssnano = require('gulp-cssnano');
 // JS
 const webpack = require('webpack2-stream-watch');
 
+// BUILD
+const htmlmin = require('gulp-htmlmin');
+
 const supported = [
     'last 2 versions',
     'safari >= 8',

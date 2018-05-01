@@ -15,5 +15,14 @@
 </main>
 
 {{!> global/footer }}
+<script>
+  const text = new SpeechSynthesisUtterance("Hello! My name is Adam Fratino.")
+  const mouth = document.querySelector('.mouth')
+
+  setTimeout(() => {
+    speechSynthesis.speak(text);
+    mouth.classList.add('talk')
+  }, 1000)
+</script>
 </body>
 </html>

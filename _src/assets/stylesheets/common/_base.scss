@@ -30,7 +30,13 @@ h1, h2, h3, h4, p {
   }
 }
 
-h1 { font-size: 4.8rem; }
+h1 {
+  font-size: 3.8rem;
+  line-height: 1.2;
+  @include max-screen($md) {
+    font-size: 3rem;
+  }
+}
 
 h2 {
   font-size: 3rem;
@@ -40,6 +46,9 @@ h2 {
 h3 {
   font-size: 2rem;
   line-height: 1.4;
+  @include max-screen($md) {
+    font-size: 1.8rem;
+  }
 }
 
 h4 {
