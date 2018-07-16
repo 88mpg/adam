@@ -23,13 +23,43 @@ body {
 
   .copy {
     flex: 0 0 1;
-    h1 {
-      margin-bottom: 0.5rem;
+    h1 { margin-bottom: 0.5rem; }
+    h4 {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      margin-right: 2rem;
+      border-bottom: 1px dashed black;
+    }
+    p {
+      margin-bottom: 2rem;
+      &:last-of-type {
+        margin-bottom: 6rem;
+      }
     }
     @include max-screen($md) {
       h1,
       h3,
       p { margin-bottom: 1.5rem; }
+    }
+
+    .links {
+      list-style-type: circle;
+      font-size: 1.4rem;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      @include max-screen($md) {
+        display: block;
+        list-style-type: none;
+      }
+
+      li {
+        margin-bottom: 1rem;
+      }
+      small {
+        font-size: 1rem;
+        margin-left: .5rem;
+      }
     }
   }
 

@@ -18,5 +18,11 @@
     {{#each copy}}
     <p>{{{ this }}}</p>
     {{/each}}
+    <h4>A few projects I've thrown together:</h4>
+    <ul class="links">
+      {{#each links}}
+      <li><a href="{{ display }}" target="_blank">{{ title }}</a> <a href="{{ source }}" target="_blank"><small>Source</small></a>
+      {{/each}}
+    </ul>
   </div>
 </div>

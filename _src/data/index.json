@@ -4,10 +4,52 @@
 		"description": "(Yet another front-end developer with a background in design).",
 		"copy": [
 			"The first bit of code I taught myself was a CSS snippet to hide the banner ads on an Angelfire site I made dedicated to <strong>Calvin &amp; Hobbes</strong>, but I started feeling guilty so now I work client-side development at <strong>advertising agencies</strong> to make up for it.",
-			"I came to New York City to get my <strong>BFA in Graphic Design</strong> at the <strong>School of Visual Arts</strong>. I stuck around to write code at <strong>The Barbarian Group</strong> and <strong>Rokkan</strong>. I love pushing the limits of CSS, and modern Javascript is pretty fun too.",
+			"I came to New York City to get my <strong>BFA in Graphic Design</strong> at the <strong>School of Visual Arts</strong>. I stuck around to write code at <strong>The Barbarian Group</strong> and <strong>Rokkan</strong>. I love pushing the limits of CSS (my face on this page is all CSS, I was bored), and modern Javascript is pretty fun too.",
       "If you'd like to check out some code feel free to visit my <a href=\"//codepen.io/88mpg\" target=\"_blank\"><strong>CodePen</strong></a> or <a href=\"//github.com/88mpg\" target=\"_blank\"><strong>Github</strong></a>. If you want to see some of my art things check out my <a href=\"//cargocollective.com/adamfratino\" target=\"_blank\"><strong>Cargo</strong></a>. Also have a <a href=\"assets/fratino-resume.pdf\"><strong>resume</strong></a>.",
       "In case you care about my personality, I own a <strong>fat cat</strong>, I play in <strong>Skee-Ball</strong> and <strong>Shuffleboard</strong> leagues, and I want to break the world record in <strong>Tapper</strong>."
-		]
+		],
+    "links": [
+      {
+        "title": "Casio Watch",
+        "display": "https://88mpg.github.io/casio-watch/",
+        "source": "https://github.com/88mpg/casio-watch"
+      },
+      {
+        "title": "Skee Ball Hybrid Simulator",
+        "display": "https://88mpg.github.io/hybrid-sim/",
+        "source": "https://github.com/88mpg/hybrid-sim"
+      },
+      {
+        "title": "Skee Ball Scorer",
+        "display": "https://88mpg.github.io/skeeact/",
+        "source": "https://github.com/88mpg/skeeact"
+      },
+      {
+        "title": "Shuffleboard Helper",
+        "display": "https://88mpg.github.io/shuffleboard/",
+        "source": "https://github.com/88mpg/shuffleboard"
+      },
+      {
+        "title": "PWS Redesign Concept",
+        "display": "https://88mpg.github.io/pws_redesign/",
+        "source": "https://github.com/88mpg/pws_redesign"
+      },
+      {
+        "title": "Tekken Chicken ver.1",
+        "display": "http://88mpg.github.io/tekken-chicken/",
+        "source": "https://github.com/88mpg/tekken-chicken"
+      },
+      {
+        "title": "Tekken Chicken ver.2",
+        "display": "https://88mpg.github.io/tc2/",
+        "source": "https://github.com/88mpg/tc2"
+      },
+      {
+        "title": "Quick Table to JSON tool",
+        "display": "http://tabletojson.com/",
+        "source": "https://github.com/88mpg/quick-table-to-json-tool"
+      }
+    ]
 	},
 	"nav": {
 		"links": []
